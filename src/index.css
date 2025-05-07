@@ -1,0 +1,70 @@
+/* Глобальные стили и центрирование */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Playfair Display', Georgia, serif;
+  background-color: #faf5f0;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.app-content {
+  width: 100%;
+  max-width: 1200px;
+  background-color: white;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.app-footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f3ee;
+  color: #8b6e5e;
+}
+
+/* Анимации */
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+  
+  .app-content {
+    min-height: 95vh;
+  }
+}

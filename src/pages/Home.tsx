@@ -1,0 +1,110 @@
+import { useEffect, useState } from "react";
+import "../styles/Home.css";
+import firstPhoto from "../assets/firstPhoto1.png";
+import secondPhoto from "../assets/secondPhoto1.png";
+
+export default function Home() {
+  const [countdown, setCountdown] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const weddingDate = new Date("2025-08-22T16:00:00").getTime(); // Указали конкретное время свадьбы
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      if (distance > 0) {
+        setCountdown({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor(
+            (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+          ),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000),
+        });
+      } else {
+        setCountdown({
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+        });
+      }
+    };
+
+    updateCountdown();
+    const timer = setInterval(updateCountdown, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <section className="home-section">
+      <h1 className="home-title">Дорогие друзья и родные!</h1>
+      <div className="couple-names">
+        <span>Мария</span>
+        <span className="ampersand">&</span>
+        <span>Евгений</span>
+      </div>
+      <p className="invitation-text">Приглашаем вас на нашу свадьбу</p>
+      <div className="wedding-date">22 Августа 2025 в 15:00</div>
+
+      <div className="countdown-container">
+        <div className="countdown-title">До свадьбы осталось:</div>
+        <div className="countdown-timer">
+          <div className="countdown-item">
+            <span className="countdown-value">{countdown.days}</span>
+            <span className="countdown-label">дней</span>
+          </div>
+          <div className="countdown-separator">:</div>
+          <div className="countdown-item">
+            <span className="countdown-value">
+              {countdown.hours.toString().padStart(2, "0")}
+            </span>
+            <span className="countdown-label">часов</span>
+          </div>
+          <div className="countdown-separator">:</div>
+          <div className="countdown-item">
+            <span className="countdown-value">
+              {countdown.minutes.toString().padStart(2, "0")}
+            </span>
+            <span className="countdown-label">минут</span>
+          </div>
+          <div className="countdown-separator">:</div>
+          <div className="countdown-item">
+            <span className="countdown-value">
+              {countdown.seconds.toString().padStart(2, "0")}
+            </span>
+            <span className="countdown-label">секунд</span>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div
+        style={{
+          position: "fixed",
+          top: "95px",
+          left: "550px",
+          zIndex: 100,
+        }}
+      >
+        <img src={firstPhoto} height="606px" width="478px" />
+      </div>
+      <div
+        style={{
+          position: "fixed",
+          top: "95px",
+          left: "1550px",
+          zIndex: 100,
+        }}
+      >
+        <img src={secondPhoto} height="606px" width="478px" />
+      </div>
+    </section>
+  );
+}
