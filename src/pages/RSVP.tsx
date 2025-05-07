@@ -12,7 +12,7 @@ export default function RSVP() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await fetch("http://backend:3001/api/rsvp", {
+    const response = await fetch("http://79.133.182.46:3001/api/rsvp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
