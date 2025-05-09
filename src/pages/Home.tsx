@@ -56,8 +56,8 @@ export default function Home() {
       <div className={'photo-wrapper'}>
         <img
           style={{
-            width: "400px",
-            height: "650px",
+            width: "500px",
+            height: "700px",
             objectFit: "cover",
             zIndex: 100,
           }}
@@ -110,8 +110,8 @@ export default function Home() {
       <div className={'photo-wrapper'}>
         <img
           style={{
-            width: "400px",
-            height: "650px",
+            width: "500px",
+            height: "700px",
             objectFit: "cover",
             zIndex: 100,
           }}

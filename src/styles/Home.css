@@ -173,6 +173,20 @@ body {
   }
 }
 
+.photo-wrapper {
+  z-index: 9;
+
+  &:first-child {
+    margin-right: -40px;
+  }
+
+  &:last-child {
+    margin-left: -40px;
+  }
+}
+
+
+
 /* прятать .photo-wrapper на маленькой ширине */
 @media (max-width: 1350px) {
   .photo-wrapper {
