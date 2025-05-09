@@ -44,67 +44,95 @@ export default function Home() {
   }, []);
 
   return (
-    <section className="home-section">
-      <h1 className="home-title">Дорогие друзья и родные!</h1>
-      <div className="couple-names">
-        <span>Мария</span>
-        <span className="ampersand">&</span>
-        <span>Евгений</span>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+      className="layout-row"
+    >
+      <div
+        style={{
+          maxWidth: "400px",
+          height: "auto",
+          objectFit: "cover",
+          zIndex: 100,
+        }}
+      >
+        <img
+          style={{
+            width: "400px",
+            height: "650px",
+            objectFit: "cover",
+            zIndex: 100,
+          }}
+          src={firstPhoto}
+          alt="Мария"
+        />
       </div>
-      <p className="invitation-text">Приглашаем вас на нашу свадьбу</p>
-      <div className="wedding-date">22 Августа 2025 в 15:00</div>
-
-      <div className="countdown-container">
-        <div className="countdown-title">До свадьбы осталось:</div>
-        <div className="countdown-timer">
-          <div className="countdown-item">
-            <span className="countdown-value">{countdown.days}</span>
-            <span className="countdown-label">дней</span>
-          </div>
-          <div className="countdown-separator">:</div>
-          <div className="countdown-item">
-            <span className="countdown-value">
-              {countdown.hours.toString().padStart(2, "0")}
-            </span>
-            <span className="countdown-label">часов</span>
-          </div>
-          <div className="countdown-separator">:</div>
-          <div className="countdown-item">
-            <span className="countdown-value">
-              {countdown.minutes.toString().padStart(2, "0")}
-            </span>
-            <span className="countdown-label">минут</span>
-          </div>
-          <div className="countdown-separator">:</div>
-          <div className="countdown-item">
-            <span className="countdown-value">
-              {countdown.seconds.toString().padStart(2, "0")}
-            </span>
-            <span className="countdown-label">секунд</span>
-          </div>
+      <section className="home-section">
+        <h1 className="home-title">Дорогие друзья и родные!</h1>
+        <div className="couple-names">
+          <span>Мария</span>
+          <span className="ampersand">&</span>
+          <span>Евгений</span>
         </div>
-        <div></div>
-      </div>
+        <p className="invitation-text">Приглашаем вас на нашу свадьбу</p>
+        <div className="wedding-date">22 Августа 2025 в 15:00</div>
+
+        <div className="countdown-container">
+          <div className="countdown-title">До свадьбы осталось:</div>
+          <div className="countdown-timer">
+            <div className="countdown-item">
+              <span className="countdown-value">{countdown.days}</span>
+              <span className="countdown-label">дней</span>
+            </div>
+            <div className="countdown-separator">:</div>
+            <div className="countdown-item">
+              <span className="countdown-value">
+                {countdown.hours.toString().padStart(2, "0")}
+              </span>
+              <span className="countdown-label">часов</span>
+            </div>
+            <div className="countdown-separator">:</div>
+            <div className="countdown-item">
+              <span className="countdown-value">
+                {countdown.minutes.toString().padStart(2, "0")}
+              </span>
+              <span className="countdown-label">минут</span>
+            </div>
+            <div className="countdown-separator">:</div>
+            <div className="countdown-item">
+              <span className="countdown-value">
+                {countdown.seconds.toString().padStart(2, "0")}
+              </span>
+              <span className="countdown-label">секунд</span>
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </section>
       <div
         style={{
-          position: "fixed",
-          top: "95px",
-          left: "550px",
+          maxWidth: "250px",
+          height: "auto",
+          objectFit: "cover",
           zIndex: 100,
         }}
       >
-        <img src={firstPhoto} height="606px" width="478px" />
+        <img
+          style={{
+            width: "250px",
+            height: "650px",
+            objectFit: "cover",
+            zIndex: 100,
+          }}
+          src={secondPhoto}
+          alt="Мария и Евгений"
+        />
       </div>
-      <div
-        style={{
-          position: "fixed",
-          top: "95px",
-          left: "1550px",
-          zIndex: 100,
-        }}
-      >
-        <img src={secondPhoto} height="606px" width="478px" />
-      </div>
-    </section>
+    </div>
   );
 }

@@ -9,10 +9,10 @@ export default function RSVP() {
     attending: "yes",
     companions: [""],
   });
-
+  //79.133.182.46
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const response = await fetch("http://79.133.182.46:3001/api/rsvp", {
+    const response = await fetch("http://localhost:3001/api/rsvp", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -1,0 +1,184 @@
+/* Импорт шрифтов */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500;700&display=swap');
+
+/* Основные стили */
+.home-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-family: 'Inter', sans-serif;
+  background: #fffaf9;
+  color: #5C4A47;
+}
+
+/* Заголовки и текст */
+.home-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #7A1E2D;
+  margin-bottom: 1rem;
+}
+
+.couple-names {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #3E1D1D;
+  margin: 1rem 0;
+}
+
+.couple-names .ampersand {
+  color: #BFA8A0;
+  margin: 0 0.5rem;
+}
+
+.invitation-text {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #7A1E2D;
+}
+
+.wedding-date {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #5C4A47;
+}
+
+/* Таймер */
+.countdown-container {
+  background-color: #F3E9E6;
+  border: 2px solid #C8B6B0;
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #7A1E2D;
+}
+
+.countdown-timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.countdown-value {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #7A1E2D;
+  font-family: 'Playfair Display', serif;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  color: #5C4A47;
+  font-weight: 500;
+}
+
+.countdown-separator {
+  font-size: 2rem;
+  color: #C3A29E;
+}
+
+/* Стили для фото по бокам */
+.floating-photo {
+  position: fixed;
+  z-index: 100;
+  max-width: 25vw;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease;
+}
+
+.left-photo {
+  top: 12vh;
+  left: 5vw;
+}
+
+.right-photo {
+  top: 12vh;
+  right: 5vw;
+}
+
+.responsive-photo {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1024px) {
+  .floating-photo {
+    max-width: 30vw;
+  }
+  
+  .left-photo {
+    left: 2vw;
+  }
+  
+  .right-photo {
+    right: 2vw;
+  }
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .floating-photo {
+    position: relative;
+    max-width: 80%;
+    margin: 20px auto;
+    top: auto;
+    left: auto;
+    right: auto;
+    display: block;
+  }
+
+  .left-photo, .right-photo {
+    float: none;
+  }
+  
+  .home-section {
+    padding-bottom: 40px;
+  }
+}
+
+/* Контейнер для основного контента и фото по бокам */
+.layout-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.side {
+  flex-shrink: 0;
+}
+
+.side img {
+  display: block;
+  width: 220px;
+  height: auto;
+  max-width: 100%;
+}
+
+.main {
+  flex: 1 1 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}

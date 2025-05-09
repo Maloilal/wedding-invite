@@ -16,7 +16,7 @@ export default function AdminRSVP() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://79.133.182.46:3001/api/rsvp")
+    fetch("http://localhost:3001/api/rsvp")
       .then((res) => res.json())
       .then((data) => {
         setEntries(data);

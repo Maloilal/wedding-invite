@@ -32,28 +32,16 @@
   }
   
   /* Стили для главной страницы */
-  .home {
-    text-align: center;
-    padding: 40px 0;
-  }
+ 
   
-  .couple-names {
-    font-size: 3.5rem;
-    margin: 30px 0;
-    color: #8b6e5e;
-  }
-  
+
   .wedding-date {
     font-size: 2rem;
     margin: 30px 0;
     color: #5d4738;
   }
   
-  .countdown {
-    font-size: 1.2rem;
-    margin-top: 20px;
-    color: #666;
-  }
+
   
   /* Стили для локации */
   .location {

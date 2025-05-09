@@ -1,70 +1,35 @@
-/* Глобальные стили и центрирование */
-* {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@500;700&display=swap');
+
+body {
+  background-color: #FAF4EF;
+  color: #5C4A47;
+  font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  font-family: 'Playfair Display', Georgia, serif;
-  background-color: #faf5f0;
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #3E1E1E;
 }
 
-.app-container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
+.section {
+  background-color: #F3E8E4;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(122, 30, 45, 0.15);
 }
 
-.app-content {
-  width: 100%;
-  max-width: 1200px;
-  background-color: white;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  min-height: 90vh;
+.button {
+  background-color: #7A1E2D;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-.main-content {
-  flex: 1;
-  padding: 30px;
-}
-
-.app-footer {
-  padding: 20px;
-  text-align: center;
-  background-color: #f8f3ee;
-  color: #8b6e5e;
-}
-
-/* Анимации */
-.fade-enter {
-  opacity: 0;
-}
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 300ms ease-in;
-}
-.fade-exit {
-  opacity: 1;
-}
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 300ms ease-out;
-}
-
-@media (max-width: 768px) {
-  .app-container {
-    padding: 10px;
-  }
-  
-  .app-content {
-    min-height: 95vh;
-  }
+.button:hover {
+  background-color: #A5585F;
 }
