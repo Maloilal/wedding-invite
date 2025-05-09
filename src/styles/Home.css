@@ -173,3 +173,10 @@ body {
   }
 }
 
+/* прятать .photo-wrapper на маленькой ширине */
+@media (max-width: 1350px) {
+  .photo-wrapper {
+    display: none;
+  }
+}
+

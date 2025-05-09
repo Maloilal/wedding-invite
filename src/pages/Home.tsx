@@ -53,14 +53,7 @@ export default function Home() {
       }}
       className="layout-row"
     >
-      <div
-        style={{
-          maxWidth: "400px",
-          height: "auto",
-          objectFit: "cover",
-          zIndex: 100,
-        }}
-      >
+      <div className={'photo-wrapper'}>
         <img
           style={{
             width: "400px",
@@ -114,17 +107,10 @@ export default function Home() {
           <div></div>
         </div>
       </section>
-      <div
-        style={{
-          maxWidth: "250px",
-          height: "auto",
-          objectFit: "cover",
-          zIndex: 100,
-        }}
-      >
+      <div className={'photo-wrapper'}>
         <img
           style={{
-            width: "250px",
+            width: "400px",
             height: "650px",
             objectFit: "cover",
             zIndex: 100,
