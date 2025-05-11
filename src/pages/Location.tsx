@@ -1,8 +1,8 @@
 export default function Location() {
   return (
-    <section className="location">
-      <h2>Локация</h2>
-      <div className="address">
+    <section className="home-section">
+      <h2 style={{ color: "#7A1E2D" }}>Локация</h2>
+      <div style={{ color: "#7A1E2D" }} className="address">
         <p>Data</p>
         <p>г. Гомель, Речицкий просп. 158</p>
         <p>Начало в 15:00</p>
@@ -23,6 +23,7 @@ export default function Location() {
         target="_blank"
         rel="noreferrer"
         className="map-button"
+        style={{ backgroundColor: "#7A1E2D" }}
       >
         Открыть в Google Maps
       </a>

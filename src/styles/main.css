@@ -21,14 +21,14 @@
   }
   
   nav a {
-    color: #8b6e5e;
+    color: #7A1E2D;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
   }
   
   nav a:hover {
-    color: #5d4738;
+    color: #b42309;
   }
   
   /* Стили для главной страницы */
@@ -135,4 +135,19 @@
     text-align: center;
     border-top: 1px solid #eee;
     color: #8b6e5e;
+  }
+  .button-nav {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #7A1E2D;
+    border: 2px solid #7A1E2D;
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .button-nav:hover {
+    background-color: #7A1E2D;
+    color: white;
   }

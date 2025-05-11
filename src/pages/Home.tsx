@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../styles/Home.css";
 import firstPhoto from "../assets/firstPhoto1.png";
 import secondPhoto from "../assets/secondPhoto1.png";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   const [countdown, setCountdown] = useState({
@@ -53,10 +54,10 @@ export default function Home() {
       }}
       className="layout-row"
     >
-      <div className={'photo-wrapper'}>
+      <div className={"photo-wrapper"}>
         <img
           style={{
-            width: "500px",
+            width: "550px",
             height: "700px",
             objectFit: "cover",
             zIndex: 100,
@@ -73,8 +74,17 @@ export default function Home() {
           <span>Евгений</span>
         </div>
         <p className="invitation-text">Приглашаем вас на нашу свадьбу</p>
-        <div className="wedding-date">22 Августа 2025 в 15:00</div>
-
+        <div
+          style={{ border: "2px solid #7A1E2D", borderRadius: "40px" }}
+          className="wedding-date"
+        >
+          22 Августа 2025 в 15:00
+        </div>
+        <div>
+          <Link to="/rsvp">
+            <button className="button">Заполните форму</button>
+          </Link>
+        </div>
         <div className="countdown-container">
           <div className="countdown-title">До свадьбы осталось:</div>
           <div className="countdown-timer">
@@ -107,10 +117,10 @@ export default function Home() {
           <div></div>
         </div>
       </section>
-      <div className={'photo-wrapper'}>
+      <div className={"photo-wrapper"}>
         <img
           style={{
-            width: "500px",
+            width: "550px",
             height: "700px",
             objectFit: "cover",
             zIndex: 100,

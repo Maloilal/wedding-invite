@@ -41,7 +41,7 @@ body {
 }
 
 .couple-names .ampersand {
-  color: #BFA8A0;
+  color: #7A1E2D;
 }
 
 /* Заголовок */
@@ -177,11 +177,11 @@ body {
   z-index: 9;
 
   &:first-child {
-    margin-right: -40px;
+    margin-right: -30px;
   }
 
   &:last-child {
-    margin-left: -40px;
+    margin-left: -30px;
   }
 }
 
@@ -192,5 +192,16 @@ body {
   .photo-wrapper {
     display: none;
   }
+}
+
+.button {
+  background-color: #7A1E2D;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 

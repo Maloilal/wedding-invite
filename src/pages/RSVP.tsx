@@ -84,9 +84,10 @@ export default function RSVP() {
           ))}
 
         <div className="form-group">
-          <label>Email:</label>
+          <label>
+            Контактная информаация (telegram, email, номер телефона):
+          </label>
           <input
-            type="email"
             value={formData.email}
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
