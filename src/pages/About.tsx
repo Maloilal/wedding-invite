@@ -5,7 +5,7 @@ import cross from "../assets/png-clipart-computer-icons-christian-cross-icon-des
 export default function About() {
   return (
     <section className="home-section">
-      <h1 className="home-title">Дорогие друзья и родные!</h1>
+      <h1 className="home-title">Дорогие гости!</h1>
       <p className="invitation-text">
         Цветовая гамма нашей свадьбы — благородное сочетание белого и глубокого
         бордового
