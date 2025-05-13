@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./AdminRSVP.css";
+import { Header } from "../components/Header";
 
 type RSVPEntry = {
   id: number;
@@ -30,6 +31,7 @@ export default function AdminRSVP() {
 
   return (
     <section className="admin-rsvp">
+      <Header />
       <h2>RSVP Ответы</h2>
       {loading ? (
         <p>Загрузка...</p>

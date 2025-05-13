@@ -3,6 +3,7 @@ import "../styles/Home.css";
 import firstPhoto from "../assets/firstPhoto1.png";
 import secondPhoto from "../assets/secondPhoto1.png";
 import { Link } from "react-router-dom";
+import { Header } from "../components/Header";
 
 export default function Home() {
   const [countdown, setCountdown] = useState({
@@ -67,6 +68,7 @@ export default function Home() {
         />
       </div>
       <section className="home-section">
+        <Header />
         <h1 className="home-title">Дорогие друзья и родные!</h1>
         <div className="couple-names">
           <span>Мария</span>
@@ -82,7 +84,7 @@ export default function Home() {
         </div>
         <div>
           <Link to="/rsvp">
-            <button className="button">Заполните форму</button>
+            <button className="button">Заполните анкету</button>
           </Link>
         </div>
         <div className="countdown-container">
@@ -115,6 +117,10 @@ export default function Home() {
             </div>
           </div>
           <div></div>
+        </div>
+        <div style={{ paddingTop: "10px" }}>
+          {" "}
+          <p>С любовью, Евгений & Мария</p>
         </div>
       </section>
       <div className={"photo-wrapper"}>

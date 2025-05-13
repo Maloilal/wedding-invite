@@ -1,10 +1,12 @@
 import "../styles/Home.css";
 import heart from "../assets/pngtree-vector-heart-icon-png-image_925570-removebg-preview (1).png";
 import cross from "../assets/png-clipart-computer-icons-christian-cross-icon-design-christian-cross-angle-logo-removebg-preview.png";
+import { Header } from "../components/Header";
 
 export default function About() {
   return (
     <section className="home-section">
+      <Header />
       <h1 className="home-title">Дорогие гости!</h1>
       <p className="invitation-text">
         Цветовая гамма нашей свадьбы — благородное сочетание белого и глубокого

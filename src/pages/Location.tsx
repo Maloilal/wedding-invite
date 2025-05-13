@@ -1,6 +1,17 @@
+import { Header } from "../components/Header";
+import "../styles/mapContainer.css";
+
 export default function Location() {
+  const handleOpenMap = () => {
+    window.open(
+      "https://maps.google.com?q=г. Гомель, Речицкий проспект 158",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
   return (
     <section className="home-section">
+      <Header />
       <h2 style={{ color: "#7A1E2D" }}>Локация</h2>
       <div style={{ color: "#7A1E2D" }} className="address">
         <p>Data</p>
@@ -18,15 +29,9 @@ export default function Location() {
           loading="lazy"
         ></iframe>
       </div>
-      <a
-        href="https://www.google.com/maps/place/Data/@52.4027237,30.9095838,17z/data=!4m15!1m8!3m7!1s0x46d44307fd1ecadd:0x1b7d12936ee338d1!2sData!8m2!3d52.4027237!4d30.9095838!10e1!16s%2Fg%2F11s7ny8s8c!3m5!1s0x46d44307fd1ecadd:0x1b7d12936ee338d1!8m2!3d52.4027237!4d30.9095838!16s%2Fg%2F11s7ny8s8c?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
-        target="_blank"
-        rel="noreferrer"
-        className="map-button"
-        style={{ backgroundColor: "#7A1E2D" }}
-      >
+      <button className="map-button" onClick={handleOpenMap}>
         Открыть в Google Maps
-      </a>
+      </button>
     </section>
   );
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./RSVP.css";
+import { Header } from "../components/Header";
 
 export default function RSVP() {
   const [formData, setFormData] = useState({
@@ -55,6 +56,7 @@ export default function RSVP() {
 
   return (
     <section className="rsvp">
+      <Header />
       <h2>Подтвердите присутствие</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
