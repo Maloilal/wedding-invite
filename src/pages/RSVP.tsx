@@ -10,7 +10,7 @@ export default function RSVP() {
     attending: "yes",
     companions: [""],
   });
-  //79.133.182.46
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const response = await fetch("http://79.133.182.46:3001/api/rsvp", {
@@ -19,7 +19,7 @@ export default function RSVP() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        name: `${formData.name}`,
+        name: formData.name,
         email: formData.email,
         guests: formData.guests,
         attending: formData.attending,
@@ -41,17 +41,26 @@ export default function RSVP() {
     }
   };
 
-  const handleGuestsChange = (count: number) => {
-    setFormData((prev) => ({
-      ...prev,
-      guests: count,
-      companions:
-        count > 1
-          ? Array(count - 1)
-              .fill("")
-              .map((_, i) => prev.companions[i] || "")
-          : [],
-    }));
+  const handleGuestsChange = (value: string) => {
+    const count = parseInt(value) || 0;
+    setFormData((prev) => {
+      const requiredLength = Math.max(count - 1, 0);
+      const newCompanions = [...prev.companions];
+
+      if (newCompanions.length < requiredLength) {
+        while (newCompanions.length < requiredLength) {
+          newCompanions.push("");
+        }
+      } else if (newCompanions.length > requiredLength) {
+        newCompanions.length = requiredLength;
+      }
+
+      return {
+        ...prev,
+        guests: count,
+        companions: newCompanions,
+      };
+    });
   };
 
   return (
@@ -68,6 +77,7 @@ export default function RSVP() {
             required
           />
         </div>
+
         {formData.guests > 1 &&
           formData.companions.map((companion, idx) => (
             <div className="form-group" key={idx}>
@@ -87,7 +97,7 @@ export default function RSVP() {
 
         <div className="form-group">
           <label>
-            Контактная информаация (telegram, email, номер телефона):
+            Контактная информация (telegram, email, номер телефона):
           </label>
           <input
             value={formData.email}
@@ -102,8 +112,9 @@ export default function RSVP() {
           <input
             type="number"
             min="1"
-            value={formData.guests}
-            onChange={(e) => handleGuestsChange(parseInt(e.target.value) || 1)}
+            placeholder="1"
+            value={formData.guests === 0 ? "" : formData.guests}
+            onChange={(e) => handleGuestsChange(e.target.value)}
           />
         </div>
 
